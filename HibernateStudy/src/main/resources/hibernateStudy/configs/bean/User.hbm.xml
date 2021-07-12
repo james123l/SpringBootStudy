@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--dtd约束-->
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--配置类和表对应 class标签的 name：实体类的全路径，  table是class对应的表-->
+    <class name ="hibernateStudy.configs.bean.User" table="user" >
+    <!--配置实体类id和表id对应 hibernate要求实体类有一个属性唯一的值 和 hibernate要求表有字段作为唯一的值对应-->
+        <!--id 标签 name：实体类里id的属性名称 column：生成表的字段的名称 ,此处是让类id属性和表的id相互对应 -->
+        <id name="id" column="id">
+            <!--  设置id的增长策略,native：可以根据数据库品牌和版本设置数据库，使得id作为主键并自增 。
+                                uuid：hibernate会自动生成uuid值，实体类的id必须是字符串类型，数据库对应varchar(主键，唯一标识id)-->
+            <generator class="native"></generator>
+        </id>
+    <!--  配置其他属性  name属性是类的成员 column是表的字段,如果不写，hibernate会自动创建和name一样的字段名  type属性用于规定sql生成的字段的类型一般不用，因为hibernate会自动对应类对象的属性，-->
+        <property name="username" column="username"></property>
+        <property name="password" column="password"></property>
+        <property name="age" column="age"></property>
+        <property name="createDate" column="createData"></property>
+    </class>
+
+</hibernate-mapping>

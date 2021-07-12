@@ -12,6 +12,7 @@
         <module>Spring</module>
         <module>SpringMVC</module>
         <module>SpringBoot</module>
+        <module>HibernateStudy</module>
     </modules>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
