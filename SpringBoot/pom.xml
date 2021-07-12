@@ -8,11 +8,6 @@
     <artifactId>SpringBootTest</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>Spring</module>
-        <module>SpringMVC</module>
-        <module>SpringBoot</module>
-    </modules>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
@@ -65,6 +60,10 @@
             <artifactId>spring-boot-devtools</artifactId>
             <groupId>org.springframework.boot</groupId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
         </dependency>
     </dependencies>
 

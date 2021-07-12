@@ -9,9 +9,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
-@SpringBootApplication //springboot的启动类
+@SpringBootApplication //springboot的启动类， 这个项目的代码需要放在Application同级目录或者同级目录下的目录
 @EnableAutoConfiguration
-@ComponentScan("com.testBoot.boot")
+@ComponentScan("com.testBoot.boot") //主程序类所在的包
 public class Application {
     public static void main(String[] args) {
         //返回IOC容器

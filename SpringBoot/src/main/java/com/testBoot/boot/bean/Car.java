@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 //配置绑定方法一
 @Component  //组件必须放在容器中
-@ConfigurationProperties(prefix ="mycar" )  //与配置文件的mycar后面一一绑定
+@ConfigurationProperties(prefix ="mycar" )  //与配置文件application.properties的mycar后面一一绑定
 public class Car {
     private String brand;
     private int carValue;

@@ -1,3 +1,22 @@
+spring:
+  mvc:
+    # 如果想访问静态资源 需要加上/resource访问前缀 例如http://localhost:8080/resource/VeilNebula.png
+    static-path-pattern: /resource/**
+    # 视图解析器
+    view:
+      prefix: /
+      suffix: .jsp
+  resources:
+    # 通过http://localhost:8080/resource/VeilNebula.png访问静态资源 目标文件资源必须放在固定的文件夹下，否则无法访问
+    static-locations: [classpath:/staticresources/,classpath:/staticresources/pictures,classpath:/staticresources/pictures/galaxy]
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+
+# 配置绑定
+# yaml编写规则
 # yaml文件可以用yaml后缀 也可以yml。文件内部不大写
 person:
   name: 张三
@@ -42,3 +61,5 @@ person:
     health:
       - {name: fish,weight: 2}
 
+me.name: James
+me.age: 30
