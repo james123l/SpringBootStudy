@@ -1,4 +1,4 @@
-package com.testBoot.boot.bean;
+package springbootdemo.demo.bean;
 
 public class User {
 

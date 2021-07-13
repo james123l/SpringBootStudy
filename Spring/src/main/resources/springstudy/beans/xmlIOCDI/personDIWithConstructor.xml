@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <!--p命名空间DI注入，如果是引用类型 p:girlfriend-ref=""     xmlns:p="http://www.springframework.org/schema/p"-->
+<!--    <bean id="person" class="springstudy.beans.xmlIOCDI.PersonDIWithConstructor" p:name="James"></bean>-->
+
+    <!--c命名空间，需要javabean有带参构造 可以使用参数名和参数索引   xmlns:c="http://www.springframework.org/schema/c"-->
+<!--    <bean id="person" class="springstudy.beans.xmlIOCDI.PersonDIWithConstructor" c:name="James"></bean>-->
+
+    <!-- 集合抽取， dtd内的util-->
+    <util:list id="books">
+        <value>Book of Mormon</value>
+        <ref bean="person"></ref>
+    </util:list>
+
+    <!-- 起别名-->
+<!--    <alias name="personDIWithConstructor" alias="James"/>-->
+    <!--通过无参构造创建对象并赋值   配置class的对象，对象名为user-->
+<!--    <bean id="person" class="springstudy.beans.xmlIOCDI.PersonDIWithConstructor">-->
+        <!-- 为类的属性name 通过setter 赋值为James -->
+        <!-- 当赋值是基本类型的时候 使用value  当时引用类型，使用ref="springstudy/beans/ClassType.java"-->
+<!--        <property name="name" value="James"></property>-->
+<!--    </bean>-->
+
+    <!--    通过有参构造创建对象并赋值 name取别名，可以多个 -->
+    <!-- scope作用域
+    singleton：所有实例都是单例模式
+    prototype：原型模式 拿到的对象都是基于这个原型clone的
+    request
+    session
+    application
+    websocket
+    -->
+    <!-- autowire：自动装配 byname：本文件范围内通过名字搜索同名bean装配， bytype：本文件范围内通过type搜索，要求唯一，例如dog类，只能定义一个dog类的对象才可以装配成功 -->
+    <bean id="person" class="springstudy.beans.xmlIOCDI.PersonDIWithConstructor" name="James,Jimmy" scope="singleton" autowire="byName">
+        <!-- 为类的属性name 通过setter 赋值为James -->
+        <!-- index是参数索引，还有type赋值：给这个属性的参数赋值   -->
+        <constructor-arg index="0" value="James"/>
+        <!-- 通过参数名赋值 -->
+<!--        <constructor-arg name="name" value="James"/>-->
+        <!-- 使用util配置list  -->
+        <!-- 下面这句话不写也会把books设置， 因为bean标签设置了byname自动装配，所以会自动搜索person对象下的属性名books同名的对象进行赋值-->
+        <property name="books" ref="books"></property>
+    </bean>
+
+
+</beans>

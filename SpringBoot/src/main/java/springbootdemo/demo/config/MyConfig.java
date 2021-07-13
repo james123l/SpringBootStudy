@@ -1,9 +1,9 @@
-package com.testBoot.boot.config;
+package springbootdemo.demo.config;
 
 import ch.qos.logback.core.db.DBHelper;
-import com.testBoot.boot.bean.Car;
-import com.testBoot.boot.bean.Pet;
-import com.testBoot.boot.bean.User;
+import springbootdemo.demo.bean.Car;
+import springbootdemo.demo.bean.Pet;
+import springbootdemo.demo.bean.User;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

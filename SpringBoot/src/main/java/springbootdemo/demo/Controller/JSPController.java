@@ -1,4 +1,4 @@
-package com.testBoot.boot.Controller;
+package springbootdemo.demo.Controller;
 
 
 import org.springframework.stereotype.Controller;

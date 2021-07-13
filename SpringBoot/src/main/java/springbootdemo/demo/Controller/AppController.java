@@ -1,10 +1,10 @@
 
 
-package com.testBoot.boot.Controller;
+package springbootdemo.demo.Controller;
 
 
-import com.testBoot.boot.bean.Car;
-import com.testBoot.boot.bean.Person;
+import springbootdemo.demo.bean.Car;
+import springbootdemo.demo.bean.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

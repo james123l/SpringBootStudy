@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="address" class="springstudy.beans.xmlIOCDI.Address">
+        <property name="address" value="USA"></property>
+    </bean>
+    <bean name="formeraddress" class="springstudy.beans.xmlIOCDI.Address">
+        <property name="address" value="USA"></property>
+    </bean>
+
+    <!--set实现DI注入-->
+    <bean name="student" class="springstudy.beans.xmlIOCDI.StudentDIWithSet">
+        <property name="name" value="James"></property>
+        <!-- 引用类型注入 ref ,需要配置一个addressbean，级联赋值。  也可以写name=address.address进行赋值-->
+        <property name="address" ref="address"></property>
+        <!-- 数组类型注入 -->
+        <property name="books">
+            <array>
+                <value>Math</value>
+                <value>Cal1</value>
+            </array>
+        </property>
+        <!-- list类型注入  -->
+        <property name="hobby">
+            <list>
+                <value>Music</value>
+                <value>Code</value>
+            </list>
+        </property>
+        <!-- set类型注入  -->
+        <property name="formerAddress">
+            <set>
+                <!--集合添加refer类型,如果是基本类型，可以和list一样用value-->
+                <ref bean="formeraddress"></ref>
+            </set>
+        </property>
+        <!-- map类型注入  -->
+        <property name="card">
+            <map>
+                <entry key="amex" value="123456"/>
+            </map>
+        </property>
+        <!-- null注入 如果是空字符串直接ref=“”  -->
+        <property name="girlfriend" >
+            <null></null>
+        </property>
+        <!-- properties类型 -->
+        <property name="info">
+            <props>
+                <prop key="studentID">123455</prop>
+                <prop key="gender">male</prop>
+            </props>
+        </property>
+
+    </bean>
+
+
+</beans>

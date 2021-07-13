@@ -5,7 +5,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <!--配置类和表对应 class标签的 name：实体类的全路径，  table是class对应的表-->
-    <class name ="hibernateStudy.configs.bean.User" table="user" >
+    <class name ="hibernateStudy.configs.bean.User" table="personDIWithConstructor" >
     <!--配置实体类id和表id对应 hibernate要求实体类有一个属性唯一的值 和 hibernate要求表有字段作为唯一的值对应-->
         <!--id 标签 name：实体类里id的属性名称 column：生成表的字段的名称 ,此处是让类id属性和表的id相互对应 -->
         <id name="id" column="id">

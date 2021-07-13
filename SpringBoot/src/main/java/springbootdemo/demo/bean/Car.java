@@ -1,4 +1,4 @@
-package com.testBoot.boot.bean;
+package springbootdemo.demo.bean;
 
 
 import org.springframework.boot.context.properties.ConfigurationProperties;

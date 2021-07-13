@@ -1,6 +1,6 @@
-package com.testBoot.boot.apps;
+package springbootdemo.demo.apps;
 
-import com.testBoot.boot.bean.User;
+import springbootdemo.demo.bean.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @SpringBootApplication //springboot的启动类， 这个项目的代码需要放在Application同级目录或者同级目录下的目录
 @EnableAutoConfiguration
-@ComponentScan("com.testBoot.boot") //主程序类所在的包
+@ComponentScan("springbootdemo.demo") //主程序类所在的包
 public class Application {
     public static void main(String[] args) {
         //返回IOC容器

@@ -6,6 +6,14 @@ spring:
     view:
       prefix: /
       suffix: .jsp
+      # 数据库连接信息
+    datasource:
+      url: jdbc:mysql://localhost:3306/seckill?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      username: root
+      password: 0606
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      filters: stat
   resources:
     # 通过http://localhost:8080/resource/VeilNebula.png访问静态资源 目标文件资源必须放在固定的文件夹下，否则无法访问
     static-locations: [classpath:/staticresources/,classpath:/staticresources/pictures,classpath:/staticresources/pictures/galaxy]

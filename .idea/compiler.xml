@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringMVC" />
         <module name="HibernateStudy" />
+        <module name="SpringBoot" />
         <module name="Spring" />
         <module name="SpringbootStudy" />
       </profile>
@@ -18,8 +19,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="HibernateStudy" options="" />
       <module name="Spring" options="-parameters" />
-      <module name="SpringBoot" options="" />
-      <module name="SpringBootCopy" options="-parameters" />
+      <module name="SpringBoot" options="-parameters" />
+      <module name="SpringBootStudy" options="-parameters" />
       <module name="SpringMVC" options="-parameters" />
       <module name="SpringbootStudy" options="-parameters" />
     </option>
