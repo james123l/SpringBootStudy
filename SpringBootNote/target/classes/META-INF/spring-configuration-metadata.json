@@ -1,0 +1,77 @@
+{
+  "groups": [
+    {
+      "name": "mycar",
+      "type": "springbootdemo.demo.bean.Car",
+      "sourceType": "springbootdemo.demo.bean.Car"
+    },
+    {
+      "name": "person",
+      "type": "springbootdemo.demo.bean.Person",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mycar.brand",
+      "type": "java.lang.String",
+      "sourceType": "springbootdemo.demo.bean.Car"
+    },
+    {
+      "name": "mycar.car-value",
+      "type": "java.lang.Integer",
+      "sourceType": "springbootdemo.demo.bean.Car"
+    },
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    },
+    {
+      "name": "person.all-pets",
+      "type": "java.util.Map<java.lang.String,java.util.List<springbootdemo.demo.bean.Pet>>",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    },
+    {
+      "name": "person.animal",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    },
+    {
+      "name": "person.birthday",
+      "type": "java.util.Date",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    },
+    {
+      "name": "person.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    },
+    {
+      "name": "person.interests",
+      "type": "java.lang.String[]",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    },
+    {
+      "name": "person.name",
+      "type": "java.lang.String",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    },
+    {
+      "name": "person.pet",
+      "type": "springbootdemo.demo.bean.Pet",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    },
+    {
+      "name": "person.salarys",
+      "type": "java.util.Set<java.lang.Double>",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    },
+    {
+      "name": "person.score",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "springbootdemo.demo.bean.Person"
+    }
+  ],
+  "hints": []
+}
