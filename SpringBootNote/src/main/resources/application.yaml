@@ -1,0 +1,78 @@
+spring:
+  mvc:
+    # 如果想访问静态资源 需要加上/resource访问前缀 例如http://localhost:8080/resource/VeilNebula.png
+    # springboot2项目的bug： 如果设定了访问前缀 那么静态资源目录下的index.html就不能被识别为欢迎页
+    # static-path-pattern: /resource/**
+    # 视图解析器
+    view:
+      prefix: /
+      suffix: .jsp
+      # 数据库连接信息
+    datasource:
+      url: jdbc:mysql://localhost:3306/springbootdatabase?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      username: root
+      password: 0606
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      filters: stat
+    hiddenmethod:
+      filter:
+        #默认是false 会阻止rest风格提交表单时读取_METHOD等
+        enabled: true
+  resources:
+    # 通过http://localhost:8080/resource/VeilNebula.png访问静态资源 目标文件资源必须放在固定的文件夹下，否则无法访问
+    static-locations: [classpath:/staticresources/,classpath:/staticresources/pictures,classpath:/staticresources/pictures/galaxy]
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+
+# 配置绑定
+# yaml编写规则
+# yaml文件可以用yaml后缀 也可以yml。文件内部不大写
+person:
+  name: 张三
+  #字符串可以不用引号，可以用单引号和双引号
+  #单引号内的\n会作为字符串内部的字符输出 即不引起转义
+  #双引号内的\n会作为换行换行输出 引起转义
+  boss: false
+  birthday: 1986/12/9
+  age: 35
+  #数组的表示方法
+  #interests: [basketball,football,tennis]
+  interests:
+    - basketball
+    - football
+    - tennis
+  #list,set和数组一样
+  animal: [cat,dog,snake]
+  #map kv的表示方式
+  #score: {english: 80,math: 60}
+  score:
+    english: 80
+    math: 60
+  #set的表示方法
+  salarys:
+    - 99
+    - 98
+  #单个对象的表示方法
+  pet:
+    #对象内部属性
+    name: doggie
+    weight: 10
+  #对象集合的表示方法
+  allPets:
+    #key
+    sick:
+      #2种表示方法,添加三个key为sick 在list里的pet对象
+      - {name: doggie,weight: 12}
+      - name: cat
+        weight: 20
+      - name: butterfly
+        weight: 1
+    health:
+      - {name: fish,weight: 2}
+
+me.name: James
+me.age: 30

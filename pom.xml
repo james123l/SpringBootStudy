@@ -11,9 +11,11 @@
 
     <modules>
         <module>Spring</module>
-        <module>SpringMVC</module>
         <module>SpringBoot</module>
         <module>HibernateStudy</module>
+        <module>SpringMVC</module>
+        <module>SpringDataJPA</module>
+        <module>SpringSecurity</module>
     </modules>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -31,6 +33,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        <!--  inject  -->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
         <!--  数据库连接池 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -47,6 +55,11 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--  响应式编程reactor   -->
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+        </dependency>
         <!-- jsp解析插件  -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -57,10 +70,15 @@
             <artifactId>maven-archetype-webapp</artifactId>
             <version>1.4</version>
         </dependency>
-        <!-- spring aop包-->
+        <!-- aspectj包-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
+        </dependency>
+        <!-- 和上面aspectj包 有些重复-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <dependency>
             <!--  web依赖 -->
